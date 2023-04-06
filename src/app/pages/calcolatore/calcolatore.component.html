@@ -1,0 +1,46 @@
+<app-header></app-header>
+<!------ Include the above in your HEAD tag ---------->
+
+<head>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+
+
+
+
+<body>
+  <div class="login-form border-info rounded-5">
+    <div class="content">
+      <h3>Calcolatore di kilowattora</h3>
+      <div class="description">
+        <p>
+          Ecco un semplice calcolatore di Kilowattora, per usarlo al meglio e ottimizzare l'uso degli
+          elettrodomestici,
+          bisogna prima conoscere quante volte al giorno si usa un elettordomestico e quanti watt consuma. Una volta
+          ricavati i kilowattora, si può moltiplicare per 30/365 giorni per sapere il consumo mensile/annuale.
+        </p>
+      </div>
+
+      <h4>Watt</h4>
+      <div class="form-group">
+
+        <input type="number" min="1" class="form-control" id="Watt" placeholder="Watt" [(ngModel)]="watt">
+      </div>
+      <h4>Ore</h4>
+      <div class="form-group">
+        <input type="number"  min="1" class="form-control" id="Ore di utilizzo" placeholder="Ore di utilizzo" [(ngModel)]="ore">
+      </div>
+
+      <div class="form-group">
+        <button class="btnSubmit" (click)="calculate()">Calcola</button>
+      </div>
+      <div class="form-group">
+        <h3>{{result}}</h3>
+      </div>
+    </div>
+  </div>
+</body>
+
+<app-footer></app-footer>
